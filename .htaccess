@@ -1,0 +1,11 @@
+RewriteEngine On
+
+RewriteCond %{REQUEST_URI} !^/dvlexc/admin
+RewriteRule "show/([0-9]+).html$" "admin/show.php?productId=$1" [L]
+RewriteRule "edit/([0-9]+).html$" "admin/edit.php?productId=$1" [L]
+RewriteRule "manage/([0-9]+).html$" "admin/manage.php?page=$1" [L]
+RewriteRule "manage.html" "admin/manage.php"
+
+
+RewriteRule "list.html" "listpost.php"
+
